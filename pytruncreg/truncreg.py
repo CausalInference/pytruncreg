@@ -109,4 +109,7 @@ def truncreg(formula, data, point, direction, scaled=False, iterlim=50):
 
     result = minimize(objective, start, method='L-BFGS-B', bounds=bounds, options={'maxiter': iterlim})
 
-    return result
+    return {
+        'result': result,
+        'hessian': result.hess_inv.todense()
+    }
