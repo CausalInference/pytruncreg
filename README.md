@@ -11,6 +11,8 @@ The `truncreg` function is designed to estimate gaussian truncated regression mo
 
 ## Returns
 - `OptimizeResult`: an object containing the results of the results of the optimization algorithm
+- `SE` an array containing the standard errors for intercept and coefficients
+- `vcov` the hessian (variance-covariance matrix) from the optimization process
 
 ## Description
 The `truncreg` function based on the original `truncreg` R package [CRAN](https://cran.r-project.org/web/packages/truncreg/index.html) by Yves Croissant and Achim Zeileis, performs maximum likelihood estimation of a truncated gaussian regression model. The function supports both left and right truncation and will extract variables inside of `formula` from the provided `data` then constructs the model matrix by supplying an intercept and fits the truncated regression model using the L-BFGS-B optimization algorithm. Internally, the function calculates the log-likelihood, gradient, and Hessian matrix for the optimization process. The initial values for beta coefficients are estimated using ordinary least squares.\\
