@@ -110,8 +110,10 @@ def truncreg(formula, data, point, direction, scaled=False, iterlim=50):
     result = minimize(objective, start, method='L-BFGS-B', bounds=bounds, options={'maxiter': iterlim})
     opt_result = maxLikTruncreg(result.x, x, y, point, direction, scaled)
     vcov = -np.linalg.inv(opt_result['hessian'])
+    std_errors = np.sqrt(np.diag(vcov))
     
     return {
         'result': result,
-        'vcov': vcov
+        'vcov': vcov,
+        'SE': std_errors
     }
