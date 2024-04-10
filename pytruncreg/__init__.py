@@ -1,3 +1,3 @@
-from .pytruncreg import truncreg
+from .truncreg import truncreg
 
 __all__ = ['truncreg']
