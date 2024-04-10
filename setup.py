@@ -14,5 +14,5 @@ setup(
     description='Truncated Gaussian Regression Models',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/ryan-odea/pytruncreg/'
+    url='https://github.com/CausalInference/pytruncreg'
 )
