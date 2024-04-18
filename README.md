@@ -1,5 +1,5 @@
 # pytruncreg Overview
-The `truncreg` function is designed to estimate gaussian truncated regression models. The function requires `formula`, `data`, a truncation `point` and `direction` of truncation. This python package is a translation of the original `truncreg` R package [CRAN](https://cran.r-project.org/web/packages/truncreg/index.html) by Yves Croissant and Achim Zeileis.
+The `pytruncreg` package developed by [Harvard University's CausaLab](https://causalab.sph.harvard.edu/) is designed to estimate one-way truncated gaussian regression models. The function requires `formula`, `data`, a truncation `point` and `direction` of truncation. This python package is a translation of the original `truncreg` R package [CRAN](https://cran.r-project.org/web/packages/truncreg/index.html) by Yves Croissant and Achim Zeileis.
 
 ## Parameters
 - **formula** (str): String describing the model to be fitted in format `y ~ x_1 + x_2 + ... x_n`
